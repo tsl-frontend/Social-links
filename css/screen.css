@@ -52,11 +52,11 @@ table {
   border-spacing: 0;
 }
 
-.icons-sprite, .icons-facebook, .icons-tumblr, .icons-twitter, .icons-vimeo {
+.icons-sprite, .icons-facebook, .facebook:before, .icons-tumblr, .icons-twitter, .twitter:before, .icons-vimeo {
   background: url('/img/icons-sa5e9bd7b09.png') no-repeat;
 }
 
-.icons-facebook {
+.icons-facebook, .facebook:before {
   background-position: 0 -96px;
 }
 
@@ -64,7 +64,7 @@ table {
   background-position: 0 -64px;
 }
 
-.icons-twitter {
+.icons-twitter, .twitter:before {
   background-position: 0 -32px;
 }
 
@@ -72,18 +72,22 @@ table {
   background-position: 0 0;
 }
 
-body {
-  padding: 30px;
-  font-family: Helvetica;
-  font-size: 20px;
+li {
+  margin-bottom: .5em;
 }
 
-.social li {
-  margin-bottom: 5px;
-}
-.social li a {
-  padding-left: 40px;
-  height: 32px;
+a {
+  border: 1px solid black;
   display: block;
+  padding: 0 0 0 40px;
   line-height: 32px;
+  position: relative;
+}
+a:before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }

@@ -1,26 +1,40 @@
 // Reset no longer needed if you're using Bootstrap. But add it back if you don't want to use Bootstrap.
-// @import "reset";
 
 @import "reset";
 @import "icons/*.png";
 
 @include all-icons-sprites;
 
-body {
-    padding: 30px;
-    font-family: Helvetica;
-    font-size: 20px;
+li {
+    margin-bottom: .5em;
 }
 
-.social {
-    li {
-        margin-bottom: 5px;
+a {
+    border: 1px solid black;
+    display: block;
+    // height: 32px;
+    padding: 0 0 0 40px;
+    line-height: 32px;
+    position: relative;
 
-        a {
-            padding-left: 40px;
-            height: 32px;
-            display: block;
-            line-height: 32px;
-        }
+    &:before {
+        content: "";
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+.twitter {
+    &:before {
+        @extend .icons-twitter;
+    }
+}
+
+.facebook {
+    &:before {
+        @extend .icons-facebook;
     }
 }
